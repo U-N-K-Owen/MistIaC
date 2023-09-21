@@ -1,0 +1,125 @@
+- allowed_users:
+  - UserA
+  - UserE
+  node: kind-control-plane
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserA
+  node: kind-worker
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserE
+  node: kind-worker2
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserA
+  node: kind-worker3
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserD
+  node: kind-worker4
+  user: UserE
+- allowed_users:
+  - UserA
+  - UserD
+  node: kind-worker5
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserD
+  node: kind-worker6
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserB
+  node: kind-worker7
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserB
+  node: kind-worker8
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserB
+  node: kind-worker9
+  user: UserE
+- allowed_users:
+  - UserA
+  - UserD
+  node: kind-worker10
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserA
+  node: kind-worker11
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserD
+  node: kind-worker12
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserA
+  node: kind-worker13
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserD
+  node: kind-worker14
+  user: UserE
+- allowed_users:
+  - UserA
+  - UserB
+  node: kind-worker15
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserE
+  node: kind-worker16
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserD
+  node: kind-worker17
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserC
+  node: kind-worker18
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserB
+  node: kind-worker19
+  user: UserE
+- allowed_users:
+  - UserA
+  - UserE
+  node: kind-worker20
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserA
+  node: kind-worker21
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserB
+  node: kind-worker22
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserE
+  node: kind-worker23
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserB
+  node: kind-worker24
+  user: UserE

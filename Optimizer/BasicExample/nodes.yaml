@@ -1,0 +1,36 @@
+kind-control-plane:
+  cpu: 1
+  ram: 1024
+  storage: 1024
+  owner: "UserA"
+  location:
+    n2: 1
+    n3: 1
+  latency:
+    n2: 0.01
+    n3: 0.01
+  metadata: {}
+kind-control-plane2:
+  cpu: 1
+  ram: 1024
+  storage: 1024
+  owner: "UserB"
+  location:
+    n1: 1
+    n3: 1
+  latency:
+    n1: 0.01
+    n3: 0.01
+  metadata: {}
+kind-control-plane3:
+  cpu: 1
+  ram: 1024
+  storage: 1024
+  owner: "UserC"
+  location:
+    n1: 1
+    n2: 1
+  latency:
+    n1: 0.01
+    n2: 0.01
+  metadata: {}

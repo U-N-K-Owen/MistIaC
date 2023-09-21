@@ -1,0 +1,26 @@
+web:
+  - name: "web-container"
+    image: "busybox:latest"
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "nc -k -lp 8080 -e echo 'HTTP/1.1 200 OK\nContent-Length:5\nContent-Type:text/plain\n\nHi01'"
+    ports:
+      - containerPort: 8080
+game:
+  - name: "game-container"
+    image: "inglebard/retroarch-web:latest"
+    ports:
+      - containerPort: 80
+database:
+  - name: "database-mariadb-container"
+    image: "mariadb:latest"
+    env:
+      - name: "MARIADB_ROOT_PASSWORD"
+        value: "example"
+      - name: "MARIADB_DATABASE"
+        value: "example"
+  - name: "database-adminer-container"
+    image: "adminer:latest"
+    ports:
+      - containerPort: 8080

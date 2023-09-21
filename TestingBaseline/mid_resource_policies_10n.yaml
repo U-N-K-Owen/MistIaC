@@ -1,0 +1,50 @@
+- allowed_users:
+  - UserA
+  - UserE
+  node: kind-control-plane
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserA
+  node: kind-worker
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserE
+  node: kind-worker2
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserA
+  node: kind-worker3
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserD
+  node: kind-worker4
+  user: UserE
+- allowed_users:
+  - UserA
+  - UserD
+  node: kind-worker5
+  user: UserA
+- allowed_users:
+  - UserB
+  - UserD
+  node: kind-worker6
+  user: UserB
+- allowed_users:
+  - UserC
+  - UserB
+  node: kind-worker7
+  user: UserC
+- allowed_users:
+  - UserD
+  - UserB
+  node: kind-worker8
+  user: UserD
+- allowed_users:
+  - UserE
+  - UserB
+  node: kind-worker9
+  user: UserE

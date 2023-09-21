@@ -1,0 +1,303 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31
+  - role: worker
+    extraMounts:
+      - hostPath: ./kind-pvc.yaml
+        containerPath: /kind/manifests/default-storage.yaml
+      - hostPath: /tmp/hostpath-provisioner
+        containerPath: /tmp/hostpath-provisioner
+    kubeadmConfigPatches: # /!\ ADAPT THIS CONFIGURATION TO YOUR DEVICE /!\ This controls the capacity of the nodes. However, it is very unintuitive, as system-reserved resources are not the node's resources, they are SUBSTRACTED from your device to get the node's resources.
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=57Gi,cpu=31

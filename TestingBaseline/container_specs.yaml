@@ -1,0 +1,25 @@
+jellyfin:
+  - name: "jellyfin-container"
+    image: "jellyfin/jellyfin:latest"
+    imagePullPolicy: IfNotPresent
+    ports:
+      - containerPort: 8096
+intelai:
+  - name: "intelai-container"
+    image: "intel/video-analytics-serving:latest"
+    imagePullPolicy: IfNotPresent
+    ports:
+      - containerPort: 8080
+grav:
+  - name: "grav-container"
+    image: "linuxserver/grav:latest"
+    imagePullPolicy: IfNotPresent
+    env:
+      - name: "PUID"
+        value: "1000"
+      - name: "PGID"
+        value: "1000"
+      - name: "TZ"
+        value: "Europe/Rome"
+    ports:
+      - containerPort: 80

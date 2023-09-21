@@ -1,0 +1,12 @@
+grav:
+  - name: "grav-request-container"
+    image: "mistplat/gravrequest:latest"
+    imagePullPolicy: IfNotPresent
+jellyfin:
+  - name: "jellyfin-request-container"
+    image: "mistplat/jellyfinrequest:latest"
+    imagePullPolicy: IfNotPresent
+intelai:
+  - name: "intelai-request-container"
+    image: "mistplat/intelairequest:latest"
+    imagePullPolicy: IfNotPresent

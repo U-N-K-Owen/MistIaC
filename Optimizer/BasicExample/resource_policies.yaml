@@ -1,0 +1,13 @@
+- user: "UserA"
+  node: "kind-control-plane"
+  max_storage: 50
+  allowed_users:
+    - "UserA"
+    - "UserB"
+- user: "UserB"
+  node: "kind-control-plane2"
+  forced_metadata:
+    content: "movies"
+- user: "UserC"
+  node: "kind-control-plane3"
+  max_distance: 1

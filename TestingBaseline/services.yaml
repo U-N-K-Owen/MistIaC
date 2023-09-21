@@ -1,0 +1,21 @@
+grav:
+  developer: "Grav"
+  ram: 102.4
+  cpu: 0.189
+  storage: 140
+  metadata:
+    content: "Blog"
+intelai:
+  developer: "Intel"
+  ram: 316.5
+  cpu: 2.0
+  storage: 2048
+  metadata:
+    content: "AI"
+jellyfin:
+  developer: "Jellyfin"
+  ram: 149.8
+  cpu: 0.0343
+  storage: 1024
+  metadata:
+    content: "Media"

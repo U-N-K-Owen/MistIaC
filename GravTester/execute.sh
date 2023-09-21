@@ -1,0 +1,1 @@
+locust -f locustfile.py --headless --users 1 --spawn-rate 1 --csv=/persistent/grav-test-$(date '+%y-%m-%d-%H-%M-%S') -H http://grav-service.default.svc.cluster.local

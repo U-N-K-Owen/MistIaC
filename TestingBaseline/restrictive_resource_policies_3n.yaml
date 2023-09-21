@@ -1,0 +1,12 @@
+- allowed_users:
+  - UserA
+  node: kind-control-plane
+  user: UserA
+- allowed_users:
+  - UserB
+  node: kind-worker
+  user: UserB
+- allowed_users:
+  - UserC
+  node: kind-worker2
+  user: UserC

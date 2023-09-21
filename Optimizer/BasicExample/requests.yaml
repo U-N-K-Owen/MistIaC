@@ -1,0 +1,12 @@
+n1-web:
+  service: "web"
+  node: "kind-control-plane"
+n1-game:
+  service: "game"
+  node: "kind-control-plane"
+n2-web:
+  service: "web"
+  node: "kind-control-plane2"
+n3-database:
+  service: "database"
+  node: "kind-control-plane3"

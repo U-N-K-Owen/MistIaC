@@ -1,0 +1,15 @@
+n1-grav:
+  service: "grav"
+  node: "kind-control-plane"
+n1-intelai:
+  service: "intelai"
+  node: "kind-control-plane"
+n2-grav:
+  service: "grav"
+  node: "kind-control-plane2"
+n2-jellyfin:
+  service: "jellyfin"
+  node: "kind-control-plane2"
+n3-intelai:
+  service: "intelai"
+  node: "kind-control-plane"

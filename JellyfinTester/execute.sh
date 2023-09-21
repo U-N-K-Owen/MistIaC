@@ -1,0 +1,1 @@
+locust -f locustfile.py --headless --users 1 --spawn-rate 1 --csv=/persistent/jellyfin-test-$(date '+%y-%m-%d-%H-%M-%S') -H http://jellyfin-service.default.svc.cluster.local:8096
